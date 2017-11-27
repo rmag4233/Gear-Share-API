@@ -15,7 +15,7 @@ class GearsController < OpenReadController
 
   # POST /gears
   def create
-    @gear = Gear.new(gear_params)
+    @gear = current_user.gears.build(gear_params)
 
     if @gear.save
       render json: @gear, status: :created, location: @gear
