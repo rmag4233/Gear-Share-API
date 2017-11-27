@@ -1,4 +1,4 @@
-class GearsController < ApplicationController
+class GearsController < OpenReadController
   before_action :set_gear, only: [:show, :update, :destroy]
 
   # GET /gears
