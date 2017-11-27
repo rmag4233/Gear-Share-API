@@ -1,6 +1,6 @@
 class GearsController < OpenReadController
-  before_action :set_gear, only: [:show, :update, :destroy]
-
+  before_action :set_gear, only: [:show, :update]
+  before_action :set_delete_gear, only: [:destroy]
   # GET /gears
   def index
     @gears = Gear.all
@@ -42,6 +42,10 @@ class GearsController < OpenReadController
     # Use callbacks to share common setup or constraints between actions.
     def set_gear
       @gear = Gear.find(params[:id])
+    end
+
+    def set_delete_gear
+      @gear = current_user.gears.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
