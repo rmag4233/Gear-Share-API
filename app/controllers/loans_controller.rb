@@ -1,4 +1,4 @@
-class LoansController < ApplicationController
+class LoansController < OpenReadController
   before_action :set_loan, only: [:show, :update, :destroy]
 
   # GET /loans
@@ -15,7 +15,7 @@ class LoansController < ApplicationController
 
   # POST /loans
   def create
-    @loan = Loan.new(loan_params)
+    @loan = current_user.loans.build(loan_params)
 
     if @loan.save
       render json: @loan, status: :created, location: @loan
