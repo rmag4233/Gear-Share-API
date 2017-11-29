@@ -1,6 +1,6 @@
 class GearsController < OpenReadController
-  before_action :set_gear, only: [:show, :update]
-  before_action :set_delete_gear, only: [:destroy]
+  before_action :set_gear, only: [:show]
+  before_action :set_delete_gear, only: [:destroy, :update]
   # GET /gears
   def index
     @gears = Gear.all
