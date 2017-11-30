@@ -30,6 +30,8 @@ The gears controller ensures that authentication is required before being access
 
 The loan resource is a table that holds the borrower id, owner id(of the piece of gear being borrowed), gear id being borrowed, loan start and loan end dates. The loan gets created when an authenticated user sees a piece of equipment that they would like to borrow and request a loan on the front end. This loan then appears in the owner of the pieces equipment Loans section on their dashboard. From their, they can choose to accept the request (add start and end dates and make communication with the borrower), this makes an update to the loans resource. From the front end, a user can not delete a loan, but the backend is set up to only allow the user who created the loan to delete it.
 
+*Credit to GA WDI-LM02 cohort student, Brian Distefano for the user authentication code used for user sign up, login, sign out and change password functionality in this application.
+
 ## User Actions
 
 | Verb   | URI Pattern                   | Controller#Action    |
