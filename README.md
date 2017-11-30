@@ -55,11 +55,11 @@ The loan resource is a table that holds the borrower id, owner id(of the piece o
 
 | Verb   | URI Pattern                   | Controller#Action    |
 |--------|-------------------------------|----------------------|
-| GET    | `/gears`                      |    `gears#index`     |
-| GET    | `/gears/:id `                 |    `gears#show`      |
-| PATCH  | `/gears/:id `                 |  `gears#update`      |
-| DELETE | `/gears/:id `                 |   `gears#destroy`    |
-| POST   | `/gears `                     |   `gears#create`     |
+| GET    | `/loans`                      |    `loans#index`     |
+| GET    | `/loans/:id `                 |    `loans#show`      |
+| PATCH  | `/loans/:id `                 |  `loans#update`      |
+| DELETE | `/loans/:id `                 |   `loans#destroy`    |
+| POST   | `/loans `                     |   `loans#create`     |
 
 *While a loan can be destroyed, for auditing purposes, we keep don't provide the end user with a way to destory a loan through the front end.
 
